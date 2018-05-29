@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Restaurant } from './models/restaurant';
 
-@Injectable( { providedIn: 'root' })
+@Injectable( { providedIn: 'root' } )
 export class RestauranteService {
   private restaurantUrl = 'http://localhost:5000/api/restaurant';
   constructor(private http: HttpClient) { }

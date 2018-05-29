@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Meal } from '../models/meal';
+import { MealService } from '../meal.service';
 
 @Component({
   selector: 'app-pratos',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pratos.component.css']
 })
 export class PratosComponent implements OnInit {
+  meals: Meal[];
 
-  constructor() { }
+  constructor(private mealService: MealService) { }
 
   ngOnInit() {
+    this.getMeal();
   }
 
+  getMeal(): void {
+    this.mealService.getAllMeals()
+      .subscribe(meal => this.meals = meal);
+  }
 }

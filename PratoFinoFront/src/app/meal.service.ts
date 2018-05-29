@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Meal } from './models/meal';
 
-@Injectable()
+@Injectable( { providedIn: 'root' } )
 export class MealService {
 
   private mealUrl = 'http://localhost:5000/api/meal';

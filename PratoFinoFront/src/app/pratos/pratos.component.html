@@ -1,6 +1,16 @@
 <div>
   <h1>PRATOS</h1>
   <div>
-    <button>Cadastrar novo Prato</button>
+    <button routerLink="novo">Cadastrar novo Prato</button>
+  </div>
+
+  <div>
+    <ul class="pratos">
+      <li *ngFor="let prato of meals">
+        <a>Remover</a>
+        <a>Editar</a>
+        <a>{{prato.name}}</a>
+      </li>
+    </ul>
   </div>
 </div>
