@@ -1,9 +1,37 @@
-<div>
-  <ul class="restaurantes">
-    <li *ngFor="let restaurante of restaurantes">
-      <a (click)="delete(restaurante)">Remover</a>
-      <a routerLink="/restaurantes/edita/{{restaurante.restaurantId}}">Edita</a>
-      <a>{{restaurante.restaurantName}}</a>
-    </li>
-  </ul>
+<div class="interno2">
+    <h2>Filtros</h2>
+</div>
+<div class="interno2 borda">
+  <div class="interno">
+    <label>
+      <p>Nome:</p>
+      <input #filtro type="text">
+    </label>
+    <div>
+        <input type="button" value="Pesquisar" (click)="filtrar(filtro.value)">
+        <input type="button" routerLink="novo" value="Cadastrar novo Restaurante">
+    </div>
+  </div>
+</div>
+
+<div class="interno2 borda">
+  <div class="interno">
+    <div class="tabela">
+      <table>
+        <tbody>
+          <tr *ngFor="let restaurante of restaurantesFiltro">
+            <td width="5%">
+                <input type="image" src="../../assets/excluir.png" (click)="delete(restaurante)" />
+            </td>
+            <td width="5%">
+                <input type="image" src="../../assets/editar.png" routerLink="/restaurantes/edita/{{restaurante.restaurantId}}" />
+            </td>
+            <td width="90%">
+                {{restaurante.restaurantName}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

@@ -9,7 +9,6 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { PratosComponent } from './pratos/pratos.component';
-import { RestaurantesFiltroComponent } from './restaurantes-filtro/restaurantes-filtro.component';
 import { RestaurantesListaComponent } from './restaurantes-lista/restaurantes-lista.component';
 import { RestaurantesCadastroComponent } from './restaurantes-cadastro/restaurantes-cadastro.component';
 import { PratosCadastroComponent } from './pratos-cadastro/pratos-cadastro.component';
@@ -21,7 +20,6 @@ import { PratosCadastroComponent } from './pratos-cadastro/pratos-cadastro.compo
     HomeComponent,
     RestaurantesComponent,
     PratosComponent,
-    RestaurantesFiltroComponent,
     RestaurantesListaComponent,
     RestaurantesCadastroComponent,
     PratosCadastroComponent

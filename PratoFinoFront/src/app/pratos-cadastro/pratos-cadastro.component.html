@@ -1,27 +1,35 @@
-<div>
-  <h1>CADASTRO DE PRATO</h1>
-  <div>
-    <P>Dados</P>
+<div class="center">
+  <h1>Cadastro de Prato</h1>
+  
+  <div class="interno2">
+      <h2>Dados</h2>
+  </div>
+  <div class="interno2 borda" >
+    <div class="interno">
+      <label>
+        <p>Restaurante</p>
+        <select [(ngModel)]="meal.restaurantId" >
+          <option value="0" >Restaurante...</option>
+          <option *ngFor="let restaurante of restaurantes" value={{restaurante.restaurantId}}>
+            {{restaurante.restaurantName}}
+          </option>
 
-    <label>Restaurante:
-      <select [(ngModel)]="meal.restaurantId" >
-        <option value="0" >Restaurante...</option>
-        <option *ngFor="let restaurante of restaurantes" value={{restaurante.restaurantId}}>
-          {{restaurante.restaurantName}}
-        </option>
+        </select>
+      </label>
 
-      </select>
-    </label>
+      <label>
+        <p>Prato</p>
+        <input type="text" [(ngModel)] = "meal.name" />
+      </label>
 
-    <label>Prato:
-      <input [(ngModel)] = "meal.name" placeholder="Nome">
-    </label>
-
-    <label>Preço(R$):
-      <input [(ngModel)] = "meal.price" >
-    </label>
-
-    <button routerLink="/pratos">Cancelar</button>
-    <button (click)="manter();">Salvar</button>
+      <label>
+        <p>Preço(R$)</p>
+        <input type="text" [(ngModel)] = "meal.price" >
+      </label>
+      <div>
+          <input type="button" value="Cancelar" routerLink="/pratos"/>
+          <input type="button" value="Salvar" (click)="manter();"/>
+      </div>
+    </div>
   </div>
 </div>

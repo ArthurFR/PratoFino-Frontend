@@ -1,16 +1,34 @@
-<div>
-  <h1>PRATOS</h1>
-  <div>
-    <button routerLink="novo">Cadastrar novo Prato</button>
+<div class="center">
+  <h1>Pratos</h1>
+  <div class="interno2">
+      <input type="button" value="Cadastrar novo Prato" routerLink="/pratos/novo"/>
   </div>
 
-  <div>
-    <ul class="pratos">
-      <li *ngFor="let prato of meals">
-        <a (click)="delete(prato)" >Remover</a>
-        <a routerLink="/pratos/edita/{{prato.id}}">Editar</a>
-        <a>{{prato.name}}</a>
-      </li>
-    </ul>
+  <div class="interno2 borda">
+    <div class="interno">
+      <div class="tabela">  
+        <table>
+          <tbody>
+            <tr *ngFor="let prato of meals">
+                <td width="5%">
+                    <input type="image" src="../../assets/excluir.png" (click)="delete(prato)" />
+                </td>
+                <td width="5%">
+                    <input type="image" src="../../assets/editar.png" routerLink="/pratos/edita/{{prato.id}}" />
+                </td>
+                <td width="40%">
+                    {{prato.restaurantName}}
+                </td>
+                <td width="30%">
+                    {{prato.name}}
+                </td>
+                <td width="10%">
+                    {{prato.price}}
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>

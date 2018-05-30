@@ -1,4 +1,10 @@
 img {
-    width: 20%;
-    height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 30%;
+}
+h1{
+    text-align: center;
 }

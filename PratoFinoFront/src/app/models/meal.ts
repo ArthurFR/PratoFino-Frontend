@@ -3,4 +3,5 @@ export class Meal {
     name: string;
     price: number;
     restaurantId: number;
+    restaurantName: string;
 }
