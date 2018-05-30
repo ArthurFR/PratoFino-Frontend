@@ -12,8 +12,10 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'restaurantes', component: RestaurantesComponent },
   { path: 'restaurantes/novo', component: RestaurantesCadastroComponent },
+  { path: 'restaurantes/edita/:id', component: RestaurantesCadastroComponent },
   { path: 'pratos', component: PratosComponent },
-  { path: 'pratos/novo', component: PratosCadastroComponent }
+  { path: 'pratos/novo', component: PratosCadastroComponent },
+  { path: 'pratos/edita/:id', component: PratosCadastroComponent }
 ];
 
 @NgModule({

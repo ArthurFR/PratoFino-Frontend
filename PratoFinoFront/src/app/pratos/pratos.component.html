@@ -7,8 +7,8 @@
   <div>
     <ul class="pratos">
       <li *ngFor="let prato of meals">
-        <a>Remover</a>
-        <a>Editar</a>
+        <a (click)="delete(prato)" >Remover</a>
+        <a routerLink="/pratos/edita/{{prato.id}}">Editar</a>
         <a>{{prato.name}}</a>
       </li>
     </ul>

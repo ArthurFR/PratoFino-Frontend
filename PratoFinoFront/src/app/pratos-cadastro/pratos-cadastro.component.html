@@ -4,18 +4,24 @@
     <P>Dados</P>
 
     <label>Restaurante:
-      <select>Restaurantes...</select>
+      <select [(ngModel)]="meal.restaurantId" >
+        <option value="0" >Restaurante...</option>
+        <option *ngFor="let restaurante of restaurantes" value={{restaurante.restaurantId}}>
+          {{restaurante.restaurantName}}
+        </option>
+
+      </select>
     </label>
 
     <label>Prato:
-      <input placeholder="Nome">
+      <input [(ngModel)] = "meal.name" placeholder="Nome">
     </label>
 
     <label>Preço(R$):
-      <input placeholder="R$00.00">
+      <input [(ngModel)] = "meal.price" >
     </label>
 
     <button routerLink="/pratos">Cancelar</button>
-    <button>Salvar</button>
+    <button (click)="manter();">Salvar</button>
   </div>
 </div>

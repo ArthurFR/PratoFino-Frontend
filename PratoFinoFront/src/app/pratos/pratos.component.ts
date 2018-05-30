@@ -20,4 +20,9 @@ export class PratosComponent implements OnInit {
     this.mealService.getAllMeals()
       .subscribe(meal => this.meals = meal);
   }
+
+  delete(meal: Meal): void {
+    this.meals = this.meals.filter(r => r !== meal);
+    this.mealService.deleteMeal(meal.id).subscribe();
+  }
 }

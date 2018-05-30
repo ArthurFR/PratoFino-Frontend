@@ -6,12 +6,12 @@
     
     <div>
       <label>Nome do restaurante:
-        <input placeholder="Nome">
+        <input [(ngModel)] = "restaurante.restaurantName" placeholder="Nome"/>
       </label>
 
       <div>
         <button routerLink="/restaurantes">Cancelar</button>
-        <button>Salvar</button>
+        <button (click)="manter();" >Salvar</button>
       </div>
     </div>
   </div>

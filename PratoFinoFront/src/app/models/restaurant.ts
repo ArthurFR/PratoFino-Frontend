@@ -1,4 +1,4 @@
 export class Restaurant {
-    id: number;
-    name: string;
+    restaurantId: number;
+    restaurantName: string;
 }

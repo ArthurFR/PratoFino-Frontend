@@ -1,9 +1,9 @@
 <div>
   <ul class="restaurantes">
     <li *ngFor="let restaurante of restaurantes">
-      <a>Remover</a>
-      <a>Editar</a>
-      <a>{{restaurante.name}}</a>
+      <a (click)="delete(restaurante)">Remover</a>
+      <a routerLink="/restaurantes/edita/{{restaurante.restaurantId}}">Edita</a>
+      <a>{{restaurante.restaurantName}}</a>
     </li>
   </ul>
 </div>

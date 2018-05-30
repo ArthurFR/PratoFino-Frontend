@@ -22,4 +22,9 @@ export class RestaurantesListaComponent implements OnInit {
       .subscribe(restaurantes => this.restaurantes = restaurantes);
   }
 
+  delete(restaurante: Restaurant): void {
+    this.restaurantes = this.restaurantes.filter(r => r !== restaurante);
+    this.restauranteService.deleteRestaurante(restaurante.restaurantId).subscribe();
+  }
+
 }

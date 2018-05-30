@@ -23,7 +23,7 @@ export class RestauranteService {
   }
 
   updateRestaurante(restaurante: Restaurant): Observable<void>{
-    const url = `${this.restaurantUrl}/${restaurante.id}`
+    const url = `${this.restaurantUrl}/${restaurante.restaurantId}`
     return this.http.put<void>(url, restaurante);
   }
 
